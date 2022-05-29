@@ -1,0 +1,29 @@
+<!-- competencias.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/about-me-style.css' %}">
+{% endblock %}
+
+{% block main %}
+	
+    <p class="small-text">small paragraph with text...</p>
+
+    <h1 class="title">My skills:</h1>
+
+    <div class="img-area">
+        <div><img class="img" src="{% static '/portfolio/images/java.png' %}" alt=""></div>
+        <div><img class="img" src="{% static '/portfolio/images/python.png' %}" alt=""></div>
+        <div><img class="img" src="{% static '/portfolio/images/c_original_logo_icon.png' %}" alt=""></div>
+        <div><img class="img" src="{% static '/portfolio/images/database.png' %}" alt=""></div>
+        <div><img class="img" src="{% static '/portfolio/images/html-5.png' %}" alt=""></div>
+        <div><img class="img" src="{% static '/portfolio/images/css-3.png' %}" alt=""></div>
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<!-- apresentacao.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/home_style.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="title-and-image">
+	    <div class="main-title">
+            <h1>Francisco</h1>
+            <h1>Gomes</h1>
+            <h3>Software engeneering student</h3>
+        </div>
+        <img src="{% static '/portfolio/images/geometrical-shapered.png' %}" alt="">
+    </div>
+
+    <img class="arrow" src="{% static '/portfolio/images/down-arrow.png' %}" alt="">
+
+    <p class="text">Text that i need to write</p>
+
+
+
+{% endblock %}

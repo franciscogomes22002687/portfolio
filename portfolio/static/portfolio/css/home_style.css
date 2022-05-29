@@ -1,0 +1,41 @@
+:root {
+    --background-color: #1c1d25;
+    --primary-color: #6aeeb5;
+    --primary-color-hover: #29e6a7;
+}
+
+.main-title {
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.main-title h1 {
+    margin: 0;
+}
+
+.main-title h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.title-and-image {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30%;
+    padding-top: 5%;
+}
+
+.arrow {
+    width: 50px;
+    display: block;
+    margin: 195px auto 0 auto;
+}
+
+.text {
+    display: block;
+    color: white;
+    font-size: large;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}

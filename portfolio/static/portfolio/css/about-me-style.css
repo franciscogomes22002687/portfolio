@@ -1,0 +1,29 @@
+:root {
+    --background-color: #1c1d25;
+    --primary-color: #6aeeb5;
+    --primary-color-hover: #29e6a7;
+}
+
+.small-text {
+    color: white;
+    text-align: center;
+}
+
+.title {
+    color: white;
+}
+
+.img-area {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 30px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
