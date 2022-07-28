@@ -8,21 +8,35 @@
 {% endblock %}
 
 {% block main %}
-	
-    <p class="small-text">small paragraph with text...</p>
 
-    <h1 class="title">My skills:</h1>
 
-    <div class="img-area">
-        <div><img class="img" src="{% static '/portfolio/images/java.png' %}" alt=""></div>
-        <div><img class="img" src="{% static '/portfolio/images/python.png' %}" alt=""></div>
-        <div><img class="img" src="{% static '/portfolio/images/c_original_logo_icon.png' %}" alt=""></div>
-        <div><img class="img" src="{% static '/portfolio/images/database.png' %}" alt=""></div>
-        <div><img class="img" src="{% static '/portfolio/images/html-5.png' %}" alt=""></div>
-        <div><img class="img" src="{% static '/portfolio/images/css-3.png' %}" alt=""></div>
+    <div class="about-title">
+        <h1>About me</h1>
+    </div>
+    <div class="about-text">
+        <p> Hi, i'm a <span>Software Engineering Student</span> located in Lisbon, Portugal.<br>
+        I have a passion for building things, especially software since i love everything related to technology.<br>I'm currently focusing on learning  as much
+        as i can so in the future I can use my skills in the <span>Best Way Possible.</span></p>
     </div>
 
+    <div class="header">
+        <h1>My Skills</h1>
+    </div>
+	
+    <div class="container">
+        {% for competencia in competencias %}
 
+        <div class="box">
+            <div class="title">
+                <div class="image">
+                    <img src="{{ competencia.image.url }}">
+                </div>
+                <h3>{{ competencia.titulo }}</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
 
 
 

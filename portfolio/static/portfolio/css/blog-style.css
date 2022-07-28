@@ -1,0 +1,99 @@
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+
+main {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+
+.blog-title {
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    animation: transition 3s;
+}
+
+.post-area {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 32px;
+}
+
+.post {
+    position: relative;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.post p {
+    color: gray;
+}
+
+.post h4 {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.post>*:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.form form label {
+    display: inline-block;
+    width: 13ch;
+}
+
+.form form input,
+.form form textarea {
+    width: 50ch;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.form * {
+    vertical-align: top;
+}
+
+.form button {
+    margin-left: 53ch;
+    width: 13ch;
+    height: 4ch;
+    border: none;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 16px;
+    text-align: center;
+}

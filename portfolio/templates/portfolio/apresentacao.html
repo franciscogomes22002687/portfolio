@@ -8,19 +8,31 @@
 {% endblock %}
 
 {% block main %}
-    <div class="title-and-image">
-	    <div class="main-title">
-            <h1>Francisco</h1>
-            <h1>Gomes</h1>
-            <h3>Software engeneering student</h3>
-        </div>
-        <img src="{% static '/portfolio/images/geometrical-shapered.png' %}" alt="">
+    <div class="container">
+        <h2 class="object" data-value="3">Francisco Gomes<br><span>Software Engineer</span></h2>
+        <img src="{% static '/portfolio/images/1.png'%}" class="object" data-value="-2" alt="">
+        <img src="{% static '/portfolio/images/2.png'%}" class="object" data-value="6" alt="">
+        <img src="{% static '/portfolio/images/3.png'%}" class="object" data-value="4" alt="">
+        <img src="{% static '/portfolio/images/4.png'%}" class="object" data-value="-6" alt="">
+        <img src="{% static '/portfolio/images/5.png'%}" class="object" data-value="8" alt="">
+        <img src="{% static '/portfolio/images/6.png'%}" class="object" data-value="-4" alt="">
+        <img src="{% static '/portfolio/images/7.png'%}" class="object" data-value="5" alt="">
+        <img src="{% static '/portfolio/images/8.png'%}" class="object" data-value="-9" alt="">
+        <img src="{% static '/portfolio/images/9.png'%}" class="object" data-value="-5" alt="">
     </div>
 
-    <img class="arrow" src="{% static '/portfolio/images/down-arrow.png' %}" alt="">
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+        document.querySelectorAll(".object").forEach(function(move){
 
-    <p class="text">Text that i need to write</p>
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
 
-
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+    }
+    </script>
 
 {% endblock %}

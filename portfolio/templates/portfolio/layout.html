@@ -14,14 +14,14 @@
 <body>
     <header>
         <div>
-          <a href="{% url 'portfolio:apresentacao' %}" id="home-link">FG</a>
+          <a href="{% url 'portfolio:apresentacao' %}" class="home-link">FG</a>
         </div>
         <nav>
-          <a href="{% url 'portfolio:competencias' %}">About me</a>
-          <a href="{% url 'portfolio:projetos' %}">Projects</a>
-          <a href="{% url 'portfolio:formacao' %}">Web</a>
-          <a href="{% url 'portfolio:competencias' %}">Blog</a>
-          <button>Contact</button>
+          <a class="about" href="{% url 'portfolio:competencias' %}">About me</a>
+          <a class="projects" href="{% url 'portfolio:projetos' %}">Projects</a>
+          <a class="web" href="{% url 'portfolio:formacao' %}">Web</a>
+          <a class="blog" href="{% url 'portfolio:blog' %}">Blog</a>
+          <button class="contact">Contact</button>
         </nav>
       </header>
       
@@ -29,8 +29,12 @@
         {% block main %}
         {% endblock main %}
       </main>
-      
-      <footer>ULHT, 2022</footer>
+
+      <footer>
+        <p>
+          ULHT
+        </p>
+      </footer>
 </body>
 </html>
     

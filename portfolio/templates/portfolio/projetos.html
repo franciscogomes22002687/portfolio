@@ -2,7 +2,57 @@
 
 {% extends 'portfolio/layout.html' %}
 
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/projects-style.css' %}">
+{% endblock %}
+
+
 {% block main %}
-	<h3>Titulo</h3>
-    <p>texto texto texto texto texto texto texto </p>
+	<div class="projects-title">
+        <h1>My projects</h1>
+    </div>
+
+    <div class="project-container">
+        <div class="project-box">
+            <div class="box-title">
+                <h3>Java Project</h3>
+            </div>
+            <div class="box-image">
+                <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
+            </div>
+        </div>
+    </div>
+    <div class="project-container">
+        <div class="project-box">
+            <div class="box-title">
+                <h3>C Project</h3>
+            </div>
+            <div class="box-image">
+                <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
+            </div>
+        </div>
+    </div>
+    <div class="project-container">
+        <div class="project-box">
+            <div class="box-title">
+                <h3>Kotlin Project</h3>
+            </div>
+            <div class="box-image">
+                <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
+            </div>
+        </div>
+    </div>
+    <div class="project-container">
+        <div class="project-box">
+            <div class="box-title">
+                <h3>C++ Project</h3>
+            </div>
+            <div class="box-image">
+                <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

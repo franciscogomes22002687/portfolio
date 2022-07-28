@@ -1,0 +1,46 @@
+<!-- blog.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/blog-style.css' %}">
+{% endblock %}
+
+
+
+
+{% block main %}
+
+    <div class="blog-title">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="post-area">
+        {% for i in blog_posts %}
+
+        <div class="post">
+            <h1>{{ i.title }}</h1>
+            <h3>{{ i.author}}</h3>
+            <h4>{{ i.date }}</h4>
+            <p>{{ i.text }}</p>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="form">
+        <form action="" method="POST">
+          {% csrf_token %} {{ form.as_p }}
+      
+          <button type="submit">Post</button>
+        </form>
+    </div>
+
+
+
+{% endblock %}
+
+
+
