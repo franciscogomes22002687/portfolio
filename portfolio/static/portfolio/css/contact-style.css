@@ -1,0 +1,135 @@
+:root {
+    --background-color: #1c1d25;
+    --primary-color: #6aeeb5;
+    --primary-color-hover: #29e6a7;
+    --gradient-color: 45deg, #1d73ff, #8a1aff;
+}
+
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.contact-container {
+    height: 500px;
+    width: 700px;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 10px 40px black;
+}
+
+.links-div {
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links-div h1 {
+    background: linear-gradient(45deg, #1d73ff 30%, #8a1aff 70%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 25px;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.links-div img {
+    width: 70px;
+    padding: 25px;
+}
+
+.contact-div {
+    height: inherit;
+    width: inherit;
+    background-color: #333543;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.contact-name>input {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.contact-email>input {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.contact-message>textarea {
+    width: 250px;
+    height: 150px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.contact-button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 15px;
+    background: linear-gradient(45deg, #1d73ff 10%, #8a1aff 90%);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+}

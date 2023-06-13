@@ -1,0 +1,31 @@
+<!-- login.html -->
+
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/login-style.css' %}">
+{% endblock %}
+
+{% block main %}
+	
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="login-container">
+            <h1>Login</h1>
+            <div class="textfield">
+                <label for="user">Username:</label>
+                <input type="text" name="user" placeholder="Insert your username" required>
+            </div>
+            <div class="textfield">
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Insert your password" required>
+            </div>
+            <button class="login-button">Login</button>
+        </div>
+    </form>
+
+
+{% endblock %}

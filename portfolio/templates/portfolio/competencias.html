@@ -29,9 +29,79 @@
         <div class="box">
             <div class="title">
                 <div class="image">
-                    <img src="{{ competencia.image.url }}">
+                    {% load static %}
+                    <img src="{{ competencia.image.url }}" width="150px">
                 </div>
                 <h3>{{ competencia.titulo }}</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="cadeira_title">
+        <h1>Cadeiras</h1>
+    </div>
+
+    <div class="cadeira_container">
+        {% for cadeira in cadeiras %}
+
+        <div class="cadeira_box">
+            <div class="cadeira_info">
+                <h1> {{ cadeira.nome }}</h1>
+                <h2>{{ cadeira.ano }}</h2>
+                <h3>{{ cadeira.semestre }} Semester</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="educacao_title">
+        <h1>Education</h1>
+    </div>
+
+    <div class="educacao_container">
+        {% for escola in escolas %}
+
+        <div class="educacao_box">
+            <div class="educacao_info">
+                <h1> {{ escola.nome }}</h1>
+                <h2>Start: {{ escola.ano_inicio }}</h2>
+                <h3>Finish: {{ escola.ano_fim }}</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="lingua_title">
+        <h1>Languages</h1>
+    </div>
+
+    <div class="lingua_container">
+            {% for lingua in linguas %}
+
+        <div class="lingua_box">
+            <div class="lingua_info">
+                <h1> {{ lingua.nome }}</h1>
+                <h2>Level: {{ lingua.grau }}</h2>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="hobby_title">
+        <h1>Hobbies</h1>
+    </div>
+
+    <div class="hobby_container">
+        {% for interesse in interesses %}
+
+        <div class="hobby_box">
+            <div class="hobby_info">
+                <h1> {{ interesse.titulo }}</h1>
             </div>
         </div>
 

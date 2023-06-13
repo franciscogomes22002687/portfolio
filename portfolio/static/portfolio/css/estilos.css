@@ -19,6 +19,8 @@
 
 html {
     height: 100%;
+    padding: 0;
+    margin: 0;
     scroll-behavior: smooth;
 }
 
@@ -73,7 +75,7 @@ header nav {
 }
 
 
-nav a {
+nav a:not(#cbutton) {
     padding: 0 1em;
     text-decoration: none;
     font-size: 1.3rem;
@@ -83,6 +85,11 @@ nav a {
 
 nav a:hover {
     color: #DEB992;
+}
+
+#cbutton {
+    text-decoration: none;
+    color: black;
 }
 
 nav button {
@@ -102,7 +109,6 @@ nav button:hover {
 
 
 main {
-    height: 85vh;
     background-color: #1c1d25;
     padding: 4em 4em;
     display: flex;
@@ -112,10 +118,33 @@ main {
 footer {
     margin-top: auto;
     height: 5vh;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: var(--background-color);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-text {
+    margin-left: 50px;
+}
+
+.lbutton {
+    margin-right: 50px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background: linear-gradient(45deg, #1d73ff 5%, #8a1aff 95%);
+}
+
+.link {
+    text-decoration: none;
+    color: white;
 }

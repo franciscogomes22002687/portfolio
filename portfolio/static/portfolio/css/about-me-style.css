@@ -29,6 +29,7 @@ main {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     text-align: center;
+    margin-top: 5rem;
     animation: transition 3s;
 }
 
@@ -36,6 +37,7 @@ main {
     color: white;
     font-size: 20px;
     text-align: center;
+    margin-top: 2rem;
     animation: transition 4s;
 }
 
@@ -51,8 +53,11 @@ main {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     padding: 1rem;
+    margin-top: 5rem;
     animation: transition 5s;
 }
+
+/* Skills */
 
 .container {
     display: grid;
@@ -69,6 +74,11 @@ main {
     padding: 1rem;
     color: #ddd;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.box:hover {
+    transform: scale(1.2);
 }
 
 .title {
@@ -76,9 +86,147 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
-    margin-bottom: 00.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.image {
-    width: 100px;
+/* Cadeiras */
+
+.cadeira_title {
+    text-align: center;
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 1rem;
+    animation: transition 5s;
+    margin-top: 5rem;
+}
+
+.cadeira_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    animation: transition 6s;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.cadeira_box {
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.cadeira_box:hover {
+    transform: scale(1.1);
+}
+
+/* Educacao */
+
+.educacao_title {
+    text-align: center;
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 1rem;
+    margin-top: 5rem;
+    animation: transition 5s;
+}
+
+.educacao_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    animation: transition 6s;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    gap: 4rem;
+}
+
+.educacao_box {
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.educacao_box:hover {
+    transform: scale(1.1);
+}
+
+/* Linguas */
+
+.lingua_title {
+    text-align: center;
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 1rem;
+    margin-top: 5rem;
+    animation: transition 5s;
+}
+
+.lingua_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    animation: transition 6s;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    gap: 4rem;
+}
+
+.lingua_box {
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.lingua_box:hover {
+    transform: scale(1.1);
+}
+
+/* Hobbies */
+
+.hobby_title {
+    text-align: center;
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 1rem;
+    margin-top: 5rem;
+    animation: transition 5s;
+}
+
+.hobby_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    animation: transition 6s;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.hobby_box {
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.hobby_box:hover {
+    transform: scale(1.1);
 }

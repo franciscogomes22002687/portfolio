@@ -14,6 +14,10 @@ body {
     font-family: "Segoe UI", sans-serif;
 }
 
+main {
+    height: 85vh;
+}
+
 .container {
     position: relative;
     width: 100%;

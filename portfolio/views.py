@@ -33,3 +33,8 @@ def blog_view(request):
 
     return render(request, 'portfolio/blog.html', {'blog_posts': blog_posts})
 
+def login_view(request):
+    return render(request, 'portfolio/login.html')
+
+def contact_view(request):
+    return render(request, 'portfolio/contact.html')

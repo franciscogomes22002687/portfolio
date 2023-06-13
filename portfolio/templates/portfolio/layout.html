@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
 
+    {% load static %}
+    <script src="{% static 'portfolio/js/relogio.js' %}"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
 
     {% load static %}
@@ -21,20 +23,34 @@
           <a class="projects" href="{% url 'portfolio:projetos' %}">Projects</a>
           <a class="web" href="{% url 'portfolio:formacao' %}">Web</a>
           <a class="blog" href="{% url 'portfolio:blog' %}">Blog</a>
-          <button class="contact">Contact</button>
+          <button class="contact"><a id='cbutton' href="{% url 'portfolio:contact' %}">Contact</a></button>
         </nav>
-      </header>
+    </header>
       
-      <main>
-        {% block main %}
-        {% endblock main %}
-      </main>
+    <main>
+      {% block main %}
+      {% endblock main %}
+    </main>
 
-      <footer>
-        <p>
-          ULHT
-        </p>
-      </footer>
+    <footer>
+      <div class="footer-text">
+        ULHT 2022
+      </div>
+      <div class="clock">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+      <div class="log-button">
+        {% if request.user.is_authenticated %}
+          <button class="lbutton"><a class="link" href="{% url 'portfolio:login' %}">Logout</a></button>
+        {% else %}
+          <button class="lbutton"><a class="link" href="{% url 'portfolio:login' %}">Login</a></button>
+        {% endif %}
+      </div>
+    </footer>
 </body>
 </html>
     

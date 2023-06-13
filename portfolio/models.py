@@ -56,7 +56,7 @@ class Cadeira(models.Model):
 
 class Competencia(models.Model):
     titulo = models.CharField(max_length=40)
-    image = models.ImageField(blank=True, upload_to="static/portfolio/images/skill_images")
+    image = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/skill_images")
 
     def __str__(self):
         return self.titulo
@@ -79,7 +79,7 @@ class Lingua(models.Model):
 class Projeto(models.Model):
     titulo = models.CharField(max_length=30)
     descricao = models.CharField(max_length=500)
-    imagem = models.ImageField(blank=True, upload_to="portfolio/images/project_images")
+    imagem = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/project_images")
     ano = models.IntegerField()
 
 
@@ -89,7 +89,7 @@ class TFC(models.Model):
     alunos = models.ManyToManyField(Pessoa)
     orientadores = models.ManyToManyField(Professor)
     ano = models.IntegerField()
-    imagem = models.ImageField(blank=True, upload_to="static/portfolio/images/TFC_images")
+    imagem = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/TFC_images")
     linkGithub = models.CharField(max_length=500)
     linkYoutube = models.CharField(max_length=500)
     relatorio = models.CharField(max_length=500)
