@@ -246,3 +246,8 @@ main {
     font-size: 17px;
     background: linear-gradient(45deg, #1d73ff 5%, #8a1aff 95%);
 }
+
+.button-text {
+    color: white;
+    text-decoration: none;
+}

@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 
 from portfolio.models import TFC, BlogPost, Cadeira, Competencia, Escola, Interesse, Lingua, Projeto
+from .forms import *
 
 def home_page_view(request):
     return render(request, 'portfolio/apresentacao.html')
@@ -61,3 +62,53 @@ def logout_view(request):
 
 def contact_view(request):
     return render(request, 'portfolio/contact.html')
+
+def newCadeira_view(request):
+    form = CadeiraForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/competencias.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newCadeira.html', context)
+
+def newSkill_view(request):
+    form = SkillForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/competencias.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newSkill.html', context)
+
+def newEducation_view(request):
+    form = EducationForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/competencias.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newSkill.html', context)
+
+def newLanguage_view(request):
+    form = LanguageForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/competencias.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newLanguage.html', context)
+
+def newHobby_view(request):
+    form = HobbyForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/competencias.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newHobby.html', context)

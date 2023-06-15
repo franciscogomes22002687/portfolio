@@ -41,7 +41,7 @@
 
     {% if request.user.is_authenticated %}
         <div class="edit_container">
-            <button class="edit_button">Edit skills</button>
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newSkill' %}">Edit skills</a></button>
         </div>
     {% endif %}
 
@@ -67,7 +67,7 @@
 
     {% if request.user.is_authenticated %}
         <div class="edit_container">
-            <button class="edit_button">Edit cadeira</button>
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newCadeira' %}">Edit cadeira</a></button>
         </div>
     {% endif %}
 
@@ -94,7 +94,7 @@
 
     {% if request.user.is_authenticated %}
         <div class="edit_container">
-            <button class="edit_button">Edit schools</button>
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newEducation' %}">Edit education</a></button>
         </div>
     {% endif %}
 
@@ -120,7 +120,7 @@
 
     {% if request.user.is_authenticated %}
         <div class="edit_container">
-            <button class="edit_button">Edit languages</button>
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newLanguage' %}">Edit languages</a></button>
         </div>
     {% endif %}
 
@@ -144,7 +144,7 @@
 
     {% if request.user.is_authenticated %}
         <div class="edit_container">
-            <button class="edit_button">Edit hobbies</button>
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newHobby' %}">Edit Hobbies</a></button>
         </div>
     {% endif %}
 
