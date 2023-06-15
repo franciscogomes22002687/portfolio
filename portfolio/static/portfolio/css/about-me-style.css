@@ -1,7 +1,7 @@
 :root {
     --background-color: #1c1d25;
-    --primary-color: #6aeeb5;
-    --primary-color-hover: #29e6a7;
+    --primary-color: #DEB992;
+    --primary-color-hover: #c49a6d;
     --gradient-color: 45deg, #1d73ff, #8a1aff;
 }
 
@@ -229,4 +229,20 @@ main {
 
 .hobby_box:hover {
     transform: scale(1.1);
+}
+
+.edit_container {
+    text-align: center;
+    animation: transition 5s;
+}
+
+.edit_button {
+    color: white;
+    width: 90px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 17px;
+    background: linear-gradient(45deg, #1d73ff 5%, #8a1aff 95%);
 }

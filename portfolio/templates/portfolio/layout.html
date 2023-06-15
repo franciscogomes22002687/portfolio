@@ -45,7 +45,7 @@
       </div>
       <div class="log-button">
         {% if request.user.is_authenticated %}
-          <button class="lbutton"><a class="link" href="{% url 'portfolio:login' %}">Logout</a></button>
+          <button class="lbutton"><a class="link" href="{% url 'portfolio:logout' %}">Logout</a></button>
         {% else %}
           <button class="lbutton"><a class="link" href="{% url 'portfolio:login' %}">Login</a></button>
         {% endif %}
