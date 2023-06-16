@@ -81,6 +81,7 @@ class Projeto(models.Model):
     descricao = models.CharField(max_length=500)
     imagem = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/project_images")
     ano = models.IntegerField()
+    link_github = models.CharField(max_length=30, blank=True)
 
 
 class TFC(models.Model):

@@ -4,3 +4,34 @@ main {
     box-sizing: border-box;
     padding-top: 20px;
 }
+
+.title:first-child {
+    font-size: 3em;
+}
+
+.title {
+    background: linear-gradient(45deg, #1d73ff 45%, #8a1aff 55%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-top: 5rem;
+    animation: transition 3s;
+}
+
+.tech-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 300;
+    margin-right: 200;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 260;
+}
+
+.tech-text {
+    color: white;
+    padding-left: 20px;
+}
