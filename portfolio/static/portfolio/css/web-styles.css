@@ -1,3 +1,15 @@
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg)
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
 main {
     padding: 0;
     margin: 0;
@@ -25,6 +37,7 @@ main {
     margin-right: 200;
     align-items: center;
     margin-bottom: 20px;
+    animation: transition 6s;
 }
 
 img {
@@ -34,4 +47,36 @@ img {
 .tech-text {
     color: white;
     padding-left: 20px;
+}
+
+.button-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quizz-button {
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 15px;
+    background: linear-gradient(45deg, #1d73ff 10%, #8a1aff 90%);
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.quizz-button:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+
+.button-text {
+    text-decoration: none;
+    color: white;
 }

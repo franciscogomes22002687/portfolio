@@ -81,7 +81,7 @@ class Projeto(models.Model):
     descricao = models.CharField(max_length=500)
     imagem = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/project_images")
     ano = models.IntegerField()
-    link_github = models.CharField(max_length=30, blank=True)
+    link_github = models.CharField(max_length=500, blank=True)
 
 
 class TFC(models.Model):
@@ -91,9 +91,9 @@ class TFC(models.Model):
     orientadores = models.ManyToManyField(Professor)
     ano = models.IntegerField()
     imagem = models.ImageField(blank=True, upload_to="portfolio/static/portfolio/images/TFC_images")
-    linkGithub = models.CharField(max_length=500)
-    linkYoutube = models.CharField(max_length=500)
-    relatorio = models.CharField(max_length=500)
+    linkGithub = models.CharField(max_length=500, blank=True)
+    linkYoutube = models.CharField(max_length=500, blank=True)
+    relatorio = models.CharField(max_length=500, blank=True)
 
     def __str__(self):
         return self.titulo

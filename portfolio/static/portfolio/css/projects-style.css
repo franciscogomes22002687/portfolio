@@ -31,36 +31,38 @@ main {
     -webkit-background-clip: text;
     text-align: center;
     padding: 1em;
+    animation: transition 6s;
 }
 
 
-.general_container {
+.container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
     text-align: center;
+    grid-gap: 1rem;
     padding: 1rem 80px;
+    animation: transition 6s;
 }
 
-
-.project-container {}
-
-.project-box {
+.box {
     padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-.box-title {
+.box:hover {
+    transform: scale(1.2);
+}
+
+.title {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
-    margin-bottom: 00.5rem;
-    color: white;
-}
-
-.project-image {
-    width: 100px;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -70,4 +72,54 @@ main {
     -webkit-background-clip: text;
     text-align: center;
     padding: 1em;
+    animation: transition 6s;
+}
+
+
+.edit_container {
+    text-align: center;
+    animation: transition 5s;
+}
+
+.edit_button {
+    color: white;
+    width: 90px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 17px;
+    background: linear-gradient(45deg, #1d73ff 5%, #8a1aff 95%);
+}
+
+.button-text {
+    color: white;
+    text-decoration: none;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal::backdrop {
+    background: black;
+    opacity: .6;
+}
+
+.link {
+    color: grey;
+}
+
+.close {
+    color: white;
+    width: 90px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 17px;
+    background: linear-gradient(45deg, #1d73ff 5%, #8a1aff 95%);
 }

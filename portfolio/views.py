@@ -112,3 +112,36 @@ def newHobby_view(request):
 
     context = {'form':form}
     return render(request, 'portfolio/newHobby.html', context)
+
+def newProject_view(request):
+    form = ProjectForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/projetos.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newProject.html', context)
+
+def newTFC_view(request):
+    form = TFCForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/projetos.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newTFC.html', context)
+
+def newPost_view(request):
+    form = BlogForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        render(request, 'portfolio/blog.html')
+
+    context = {'form':form}
+    return render(request, 'portfolio/newPost.html', context)
+
+def quizz_view(request):
+    return render(request, 'portfolio/quizz.html')

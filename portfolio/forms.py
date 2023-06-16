@@ -25,3 +25,18 @@ class HobbyForm(ModelForm):
     class Meta:
         model = Interesse
         fields = '__all__'
+
+class ProjectForm(ModelForm):
+    class Meta:
+        model = Projeto
+        fields = '__all__'
+
+class TFCForm(ModelForm):
+    class Meta:
+        model = TFC
+        fields = '__all__'
+
+class BlogForm(ModelForm):
+    class Meta:
+        model = BlogPost
+        fields = '__all__'

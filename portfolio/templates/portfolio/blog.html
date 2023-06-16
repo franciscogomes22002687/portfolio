@@ -30,12 +30,8 @@
 
     </div>
 
-    <div class="form">
-        <form action="" method="POST">
-          {% csrf_token %} {{ form.as_p }}
-      
-          <button type="submit">Post</button>
-        </form>
+    <div class="edit_container">
+        <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newPost' %}">Post</a></button>
     </div>
 
 

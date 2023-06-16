@@ -13,51 +13,86 @@
         <h1>My projects</h1>
     </div>
 
-    <div class="general_container">
-        <div class="project-container">
-            <div class="project-box">
-                <div class="box-title">
-                    <h3>Java Project</h3>
+    <div class="container">
+        {% for projeto in projetos %}
+
+        <div class="box">
+            <div class="title">
+                <div class="image">
+                    {% load static %}
+                    <img src="{{ projeto.imagem.url }}" width="150px">
                 </div>
-                <div class="box-image">
-                    <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
-                </div>
+                <h3>{{ projeto.titulo }}</h3>
             </div>
         </div>
-        <div class="project-container">
-            <div class="project-box">
-                <div class="box-title">
-                    <h3>C Project</h3>
-                </div>
-                <div class="box-image">
-                    <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
-                </div>
-            </div>
-        </div>
-        <div class="project-container">
-            <div class="project-box">
-                <div class="box-title">
-                    <h3>Kotlin Project</h3>
-                </div>
-                <div class="box-image">
-                    <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
-                </div>
-            </div>
-        </div>
-        <div class="project-container">
-            <div class="project-box">
-                <div class="box-title">
-                    <h3>C++ Project</h3>
-                </div>
-                <div class="box-image">
-                    <img src="{% static '/portfolio/images/java.png' %}" class="project-image">
-                </div>
-            </div>
-        </div>
+
+        {% endfor %}
     </div>
+
+    {% if request.user.is_authenticated %}
+        <div class="edit_container">
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newProject' %}">Edit Projects</a></button>
+        </div>
+    {% endif %}
 
     <div class="tfc-title">
         <h1>TFC'S</h1>
     </div>
+
+    <div class="container">
+        {% for tfc in tfcs %}
+
+        <div class="box">
+            <div class="title">
+                <div class="image">
+                    {% load static %}
+                    <img src="{{ tfc.imagem.url }}" width="150px">
+                </div>
+                <h3>{{ tfc.titulo }}</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    {% if request.user.is_authenticated %}
+        <div class="edit_container">
+            <button class="edit_button"> <a class="button-text" href="{% url 'portfolio:newTFC' %}">Edit TFC's</a></button>
+        </div>
+    {% endif %}
+
+    <div class="modal-container">
+        {% for projeto in projetos %}
+            <dialog class="modal">
+                <h1 class="title">{{ projeto.titulo }}</h1>
+                <h2 class="year">{{ projeto.ano }}</h2>
+                <p class="text">{{ projeto.descricao }}</p>
+                <h2 class="link">{{ projeto.link_github }}</h2>
+                <button class="close">Close</button>
+            </dialog>
+        {% endfor %}
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+          const images = document.querySelectorAll('.image img');
+          const modals = document.querySelectorAll('.modal');
+          const closeButton = document.querySelectorAll('.close');
+      
+          // Open modal
+          images.forEach((image, index) => {
+            image.addEventListener('click', () => {
+              modals[index].showModal();
+            });
+          });
+      
+          // Close modal
+          closeButton.forEach((button, index) => {
+            button.addEventListener('click', () => {
+              modals[index].close();
+            });
+          });
+        });
+      </script>
 
 {% endblock %}

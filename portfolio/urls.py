@@ -20,7 +20,11 @@ urlpatterns = [
     path('newSkill', views.newSkill_view, name='newSkill'),
     path('newEducation', views.newEducation_view, name='newEducation'),
     path('newLanguage', views.newLanguage_view, name='newLanguage'),
-    path('newHobby', views.newHobby_view, name='newHobby')
+    path('newHobby', views.newHobby_view, name='newHobby'),
+    path('newProject', views.newProject_view, name='newProject'),
+    path('newTFC', views.newTFC_view, name='newTFC'),
+    path('newPost', views.newPost_view, name='newPost'),
+    path('quizz', views.quizz_view, name='quizz')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
